@@ -1,0 +1,8 @@
+.active{
+    background-color: yellow;
+    color: black;
+}
+.btns{
+    padding: 15px;
+    font-size:medium;
+}
