@@ -1,6 +1,9 @@
+import AllPlayers from "../AllPlayers/AllPlayers";
 
-export default function Available() {
+export default function Available({handleSelectedPlayer}) {
   return (
-    <div></div>
+    
+    <AllPlayers handleSelectedPlayer={handleSelectedPlayer}></AllPlayers>
+    
   )
 }

@@ -1,6 +1,6 @@
 import { useState } from 'react'
-
-import AllPlayers from './components/AllPlayers/AllPlayers'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Header from './components/Header/Header'
 import Headertwo from './components/HeaderTwo/Headertwo'
 import CartContainer from './components/CartContainer/CartContainer'
@@ -11,6 +11,48 @@ function App() {
     cart: true,
     status: "cart"
   })
+
+  const [selectedPlayer, setSelectedPlayer] =useState([])
+
+  const [price, setPrice] = useState(0)
+
+  const handleBuy = (pl) =>{
+    // if(price < player.biddingPrice){
+    //   alert("dfghj")
+    // }
+    // else{
+      setPrice(price - pl)
+
+    // }
+    
+  }
+  const handleAddPrice =(id)=>{
+    const player = selectedPlayer.find((p)=>p.playerId == id)
+    setPrice(price + player.biddingPrice )
+  }
+
+  const handleAdd =(player) =>{ 
+    setPrice(price + 8000000)
+   
+  }
+  
+  const handleRemove = (id) =>{
+    handleAddPrice(id)
+    const newRemove =selectedPlayer.filter(p=>p.playerId != id)
+    setSelectedPlayer(newRemove)
+  }
+
+  const handleSelectedPlayer = (player) =>{
+    const oneAdd =selectedPlayer.find((p) => p.playerId == player.playerId)
+    if(oneAdd){
+      toast("Player already selected")
+    }
+    else{
+      handleBuy(player.biddingPrice)
+      const newPlayer =[...selectedPlayer, player]
+      setSelectedPlayer(newPlayer)
+    }
+  }
 
   const handleIsActiveState = (status) => {
     if (status == "cart") {
@@ -27,14 +69,18 @@ function App() {
     }
   }
 
+ 
+
   return (
     <>
     <div className='w-10/12 mx-auto'>
 
-      <Header></Header>
-      <Headertwo></Headertwo>
-      <CartContainer isActive={isActive} handleIsActiveState={handleIsActiveState}></CartContainer>
-      <AllPlayers></AllPlayers>
+      <Header price={price} ></Header>
+      <Headertwo handleAdd ={handleAdd}></Headertwo>
+      
+
+    <CartContainer handleRemove={handleRemove} selectedPlayer={selectedPlayer} handleSelectedPlayer={handleSelectedPlayer} isActive={isActive} handleIsActiveState={handleIsActiveState}></CartContainer>
+    <ToastContainer></ToastContainer>
     </div>
       <Footer></Footer>
       

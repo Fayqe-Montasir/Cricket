@@ -1,9 +1,11 @@
 import React from 'react'
 
-export default function Player({player}) {
+export default function Player({player, handleSelectedPlayer}) {
+ 
     const {name, image, country, role, battingType, bowlingType, biddingPrice} =player
+    
   return (
-    <div className="card bg-base-100 border p-4">
+    <div id='main' className="card bg-base-100 border p-4">
   <figure >
     <img className='w-80 h-60 rounded-2xl'
       src={image}
@@ -32,9 +34,10 @@ export default function Player({player}) {
 
     <div className="card-actions items-center">
     <p className='font-semibold'>Price: ${biddingPrice}</p>
-      <button className="btn hover:bg-yellow-300">Choose Player</button>
+      <button onClick={()=>handleSelectedPlayer(player)} className="btn hover:bg-yellow-300">Choose Player</button>
     </div>
   </div>
 </div>
+
   )
 }

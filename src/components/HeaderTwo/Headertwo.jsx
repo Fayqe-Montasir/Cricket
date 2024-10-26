@@ -1,10 +1,9 @@
 import React from 'react'
 
-export default function Headertwo() {
+export default function Headertwo({handleAdd}) {
   return (
-    <div >
-        <div
-  className="hero bg-black "
+    <div className='rounded-3xl' >
+        <div className="hero  rounded-3xl bg-black "
   style={{
     backgroundImage: "url(https://i.ibb.co.com/cyyxh7Q/bg-shadow.png)",
   }}>
@@ -16,7 +15,7 @@ export default function Headertwo() {
       <p className="mb-5">
       Beyond Boundaries Beyond Limits
       </p>
-      <button className="btn btn-primary">Claim Free Credit</button>
+      <button onClick={handleAdd} className="btn btn-primary">Claim Free Credit</button>
     </div>
   </div>
 </div>
