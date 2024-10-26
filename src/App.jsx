@@ -26,11 +26,13 @@ function App() {
   }
 
   const handleAdd =(player) =>{ 
+    toast("Add money")
     setPrice(price + 8000000)
    
   }
   
   const handleRemove = (id) =>{
+    toast("Player removed")
     handleAddPrice(id)
     const newRemove =selectedPlayer.filter(p=>p.playerId != id)
     setSelectedPlayer(newRemove)
@@ -41,14 +43,14 @@ function App() {
     if(oneAdd){
       toast("Player already selected")
     }
-    else if( price > player.biddingPrice ) {
+    else if( price > player.biddingPrice) {
       toast(`Congrates!! ${player.name} is now in your squad`)
       handleBuy(player.biddingPrice)
       const newPlayer =[...selectedPlayer, player]
       setSelectedPlayer(newPlayer)
 
     }
-    else{
+    else {
       toast("Not enough money to buy this player.Claim some Credit")
     }
   }

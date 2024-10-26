@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './HeaderTwo.css'
 export default function Headertwo({handleAdd}) {
   return (
     <div>
@@ -19,7 +19,10 @@ export default function Headertwo({handleAdd}) {
           />
           <h1 className="mb-5 text-5xl font-bold">Assemble Your Ultimate Dream 11 Cricket Team</h1>
           <p className="mb-5">Beyond Boundaries Beyond Limits</p>
-          <button onClick={handleAdd} className="btn btn-primary">Claim Free Credit</button>
+          <div className=''>
+
+          <button onClick={handleAdd} className="btn font-bold bg-yellow-400">Claim Free Credit</button>
+          </div>
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@ export default function Player({player, handleSelectedPlayer}) {
     const {name, image, country, role, battingType, bowlingType, biddingPrice} =player
     
   return (
-    <div id='main' className="card bg-base-100 border p-4">
+    <div  className="card bg-base-100 border p-4">
   <figure >
     <img className='w-80 h-60 rounded-2xl'
       src={image}

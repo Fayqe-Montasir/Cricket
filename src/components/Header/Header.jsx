@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function Header({price}) {
   return (
-    <div>
-        <div className="navbar bg-base-100">
+    <div className='sticky top-0 z-50 '>
+        <div className="navbar bg-base-100 ">
   <div className="flex-1">
     <img src="https://i.ibb.co.com/L5Bws0m/logo.png" alt="" />
   </div>

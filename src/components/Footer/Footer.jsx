@@ -1,13 +1,14 @@
 import React from 'react'
+import './Footer.css'
 
 export default function Footer() {
   return (
    
     <div>
         {/*  */}
-        <div className='relative w-10/12 mx-auto -mb-32'>
+        <div className='relative w-10/12 mx-auto -mb-32 rounded-xl borders '>
         <div
-  className=" bg-white bg-cover bg-center rounded-2xl border "
+  className=" bg-white bg-cover bg-center "
   style={{
     backgroundImage: "url(https://i.ibb.co.com/cyyxh7Q/bg-shadow.png)",
   }}>
@@ -20,7 +21,7 @@ export default function Footer() {
       </p>
       <div className='space-x-3'>
       <input className='border p-3 rounded-lg md:pl-5' type="text" placeholder='Enter your email' />
-      <button className="btn btn-primary">Claim Free Credit</button>
+      <button className="btn bg-gradient-to-r from-purple-300 to-yellow-300">Claim Free Credit</button>
 
       </div>
     </div>
@@ -57,7 +58,7 @@ export default function Footer() {
       <p className='w-64 text-gray-400'>Subscribe to our newsletter for the latest updates.</p>
       <div>
         <input className='p-3 rounded-xl' type="text" name="" id="" placeholder='Enter your email' />
-        <button className='btn'>Subscribe</button>
+        <button className='btn bg-gradient-to-r from-purple-300 to-yellow-300'>Subscribe</button>
       </div>
       </div>
       </div>

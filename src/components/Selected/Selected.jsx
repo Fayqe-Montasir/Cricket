@@ -13,7 +13,10 @@ export default function Selected({selectedPlayer, handleRemove}) {
               <img className='w-14 bg-center  rounded-full ' src={pl.image} alt="" />
               <div>
               <h2 className='text-xl font-bold'>{pl.name}</h2>
+              <div className='flex gap-3'>
               <h5>{pl.role}</h5>
+              <p>${pl.biddingPrice}</p>
+              </div>
               </div>
               </div>
               
