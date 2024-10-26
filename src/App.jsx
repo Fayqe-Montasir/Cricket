@@ -17,13 +17,7 @@ function App() {
   const [price, setPrice] = useState(0)
 
   const handleBuy = (pl) =>{
-    // if(price < player.biddingPrice){
-    //   alert("dfghj")
-    // }
-    // else{
       setPrice(price - pl)
-
-    // }
     
   }
   const handleAddPrice =(id)=>{
@@ -47,10 +41,15 @@ function App() {
     if(oneAdd){
       toast("Player already selected")
     }
-    else{
+    else if( price > player.biddingPrice ) {
+      toast(`Congrates!! ${player.name} is now in your squad`)
       handleBuy(player.biddingPrice)
       const newPlayer =[...selectedPlayer, player]
       setSelectedPlayer(newPlayer)
+
+    }
+    else{
+      toast("Not enough money to buy this player.Claim some Credit")
     }
   }
 

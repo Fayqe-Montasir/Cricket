@@ -34,7 +34,7 @@ export default function Footer() {
       </div>
       <div className='w-10/12 mx-auto text-white '>
       
-      <img src="https://i.ibb.co.com/tZrxyY8/logo-footer.png" alt="" />
+      <img className='mx-auto mb-2' src="https://i.ibb.co.com/tZrxyY8/logo-footer.png" alt="" />
       <div className='md:flex justify-between'>
 
       <div>

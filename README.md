@@ -1,4 +1,27 @@
-# React + Vite
+## BPL-DREAM 11
+
+# Description
+
+# Technologies used
+React
+daisyUl
+tailwindcss
+React-Toastify
+
+# 3 key features 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

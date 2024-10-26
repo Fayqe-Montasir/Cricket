@@ -22,7 +22,7 @@ export default function Selected({selectedPlayer, handleRemove}) {
           ))
         }
         </div>
-      <button className='btn bg-yellow-400'> <a href="#main"> Add More Player </a> </button>
+      <button className='btn bg-yellow-400 mb-5'> <a href="#main"> Add More Player </a> </button>
     </div>
   )
 }
